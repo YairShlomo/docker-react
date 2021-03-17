@@ -5,7 +5,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ya1rd0cker/docker-and-kubernetes/frontend -f Dockerfile.dev .
+  - docker build -t ya1rd0cker/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true ya1rd0cker/docker-and-kubernetes/frontend npm run test
+  - docker run -e CI=true ya1rd0cker/docker-react npm run test
